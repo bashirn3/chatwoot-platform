@@ -9,9 +9,9 @@ export default async function SelectOrgPage() {
     redirect("/sign-in");
   }
 
-  // If org already selected, go to dashboard
+  // If org already selected, go to chatwoot
   if (orgId) {
-    redirect("/dashboard");
+    redirect("/api/chatwoot/sso");
   }
 
   return (
@@ -20,8 +20,8 @@ export default async function SelectOrgPage() {
         <h1 className="text-2xl font-bold mb-6">Select an Organization</h1>
         <OrganizationList
           hidePersonal={true}
-          afterSelectOrganizationUrl="/dashboard"
-          afterCreateOrganizationUrl="/dashboard"
+          afterSelectOrganizationUrl="/"
+          afterCreateOrganizationUrl="/"
         />
       </div>
     </div>

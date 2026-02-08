@@ -14,6 +14,6 @@ export default async function HomePage() {
     redirect("/select-org");
   }
 
-  // Logged in with org → Go to dashboard
-  redirect("/dashboard");
+  // Logged in with org → Go to chatwoot
+  redirect("/api/chatwoot/sso");
 }
